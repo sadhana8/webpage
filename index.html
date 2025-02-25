@@ -1,0 +1,68 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D image hover</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1601315488950-3b5047998b38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <img src="https://images.unsplash.com/photo-1601315488950-3b5047998b38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <img src="https://images.unsplash.com/photo-1601315488950-3b5047998b38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <img src="https://images.unsplash.com/photo-1601315488950-3b5047998b38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D perspective image</title>
+    <style>
+        
+
+*{
+    margin:0;
+    padding:0;
+}
+.container{
+    width:100%;
+    min-height:100vh;
+    background:#333;
+}
+.image{
+    perspective: 40000px;
+    width:50%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    transform-style: preserve-3d;
+}
+.image img{
+    transform:rotateX(70deg) rotateZ(-60deg) translate3d(-120px,0px,70px);
+    box-shadow: -80px 60px 15px 5px rgba(0,0,0,0.4);
+    transition: all .4s;
+    transform-style: preserve-3d;
+}
+.image:hover img{
+    transform:rotateX(0deg) rotateZ(0deg) translate3d(0px,0px,0px);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    transition: all .4s;
+    transform-style: preserve-3d;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+        <img src="https://images.unsplash.com/photo-1729756736992-1c619793e8fe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyOXx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </div>
+</div>
+</body>
+</html>

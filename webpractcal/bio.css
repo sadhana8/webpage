@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to top, rgb(234, 121, 200),rgb(145, 145, 225), rgb(109, 214, 203));
+    /* background-color: #3c8fb5; */
+  }
+
+  .form-container {
+    width: 800px;
+    outline: solid 1px #999;
+    background: linear-gradient(to bottom, rgb(201, 155, 187),rgb(139, 139, 182), rgb(130, 171, 167));
+    /* background-color: rgb(145, 145, 226); */
+    padding: 20px;
+  }
+
+  .form-label {
+    font-size: 18px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+   .form-submit {
+    margin-left: 35px; 
+  
+  }
+  

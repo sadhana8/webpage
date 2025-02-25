@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kings&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Maps&family=Satisfy&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body >
+    <!----sidebar start----------------->
+  <div class="sidebar ">
+    <a href="#" class="logo">
+        <img src="logo.jpg" alt="">
+        <span>The</span>codes
+    </a>
+    <ul class="side-menu">
+        <li class="active">
+            <a href="#"><i class="bx bxs-dashboard"></i>Dashboard</a>
+        </li>
+        <li>
+            <a href="#"><i class="bx bx-video"></i>Content</a>
+        </li>
+        <li>
+            <a href="#"><i class="bx bx-bar-chart"></i>Analytics</a>
+        </li>
+        <li>
+            <a href="#"><i class="bx bx-comment-detail"></i>Comments</a>
+        </li>
+        <li>
+            <a href="#"><i class="bx bx-customize"></i>Customize</a>
+        </li>
+        <li>
+            <a href="#"><i class="bx bx-group"></i>Users</a>
+        </li>
+        <li>
+            <a href="#"><i class="bx bx-cog"></i>Settings</a>
+        </li>
+    </ul>
+    <div class="side-menu">
+        <ul>
+            <li><a href="#" ><i class="bx bx-moon "></i>Dark / Light</a></li>
+            <li><a href="#" class="logout"><i class="bx bx-log-out-circle"></i>Logout</a></li>
+        </ul>
+    </div>
+  </div>
+   <!--------- sidebar close---------------->
+
+    <!-------Content start----------------->
+    <div class="content">
+        <nav>
+            <i class="bx bx-menu"></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="search">
+                <button type="submit" ><i class="bx bx-search"></i></button>
+                </div>
+            </form>
+            <a href="#" class="notification">
+                <i class="bx bx-bell"></i>
+                <span>12</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="a2.jpg" alt="">
+            </a>
+        </nav>
+
+
+        <!--   Main Start-->
+        <main>
+            <div class="header">
+                <h1>Dashboard</h1>
+                <ul class="breadcrumb">
+                    <li><a href="#">Analytics</a></li>
+                    /
+                    <li><a href="#">Content</a></li>
+                </ul>
+            </div>
+
+
+            <!--------------cards start------------>
+
+            <ul class="cards">
+                <li>
+                    <i class="bx bx-group"></i>
+                    <span class="info">
+                        <h3>7,373</h3>
+                        <p>New Users</p>
+                    </span>
+                </li>
+                <li>
+                    <i class="bx bx-cart-add"></i>
+                    <span class="info">
+                        <h3>9,373</h3>
+                        <p>Total Order</p>
+                    </span>
+                </li>
+                <li>
+                    <i class="bx bx-line-chart"></i>
+                    <span class="info">
+                        <h3>7,373</h3>
+                        <p>Site Visits</p>
+                    </span>
+                </li>
+                <li>
+                    <i class="bx bx-dollar-circle"></i>
+                    <span class="info">
+                        <h3>7,373</h3>
+                        <p>This month</p>
+                    </span>
+                </li>
+            </ul>
+            <!--------------cards close------------>
+            <!--------------bottom Data start--------------------->
+            <div class="bottom_data">
+             <div class="orders">
+                <div class="header">
+                    <h3>Recent Orders</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>103326</td>
+                            <td class="img_content">
+                                <img src="a.jpg" alt="">
+                                <p>Sadhana Sudha</p>
+                            </td>
+                            <td>admin@onlineittuts.com</td>
+                            <td>6th sep 2025</td>
+                            <td><span class="status completed">Completed</span></td>
+
+                        </tr>
+                        <tr>
+                            <td>103626</td>
+                            <td class="img_content">
+                                <img src="a2.jpg" alt="">
+                                <p>Sadhana Sudha</p>
+                            </td>
+                            <td>admin@onlineittuts.com</td>
+                            <td>6th sep 2025</td>
+                            <td><span class="status pending">Pending</span></td>
+
+                        </tr>
+                        <tr>
+                            <td>103926</td>
+                            <td class="img_content">
+                                <img src="a2.jpg" alt="">
+                                <p>Willies</p>
+                            </td>
+                            <td>admin@onlineittuts.com</td>
+                            <td>6th sep 2025</td>
+                            <td><span class="status processing">Processing</span></td>
+
+                        </tr>
+                        <tr>
+                            <td>103326</td>
+                            <td class="img_content">
+                                <img src="a.jpg" alt="">
+                                <p>Sadhana Sudha</p>
+                            </td>
+                            <td>admin@onlineittuts.com</td>
+                            <td>6th sep 2025</td>
+                            <td><span class="status completed">Completed</span></td>
+
+                        </tr>
+                        <tr>
+                            <td>103926</td>
+                            <td class="img_content">
+                                <img src="a2.jpg" alt="">
+                                <p>Willies</p>
+                            </td>
+                            <td>admin@onlineittuts.com</td>
+                            <td>6th sep 2025</td>
+                            <td><span class="status processing">Processing</span></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+
+             <!--------------------------Reminder start----------------------------->
+             <div class="reminder">
+                <div class="header">
+                    <h3>Reminder</h3>
+                </div>
+                <ul class="task_list">
+                    <li class="completed">
+                        <div class="task_title">
+                            <i class="bx bx-check-circle"></i>
+                            <p>Start Our Meeting</p>
+                        </div>
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                    </li>
+                    <li class="completed">
+                        <div class="task_title">
+                            <i class="bx bx-check-circle"></i>
+                            <p>Analysis Our Site</p>
+                        </div>
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                    </li>
+                    <li class="uncompleted">
+                        <div class="task_title">
+                            <i class="bx bx-x-circle"></i>
+                            <p>Play Snooker</p>
+                        </div>
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                    </li>
+                    <li class="completed">
+                        <div class="task_title">
+                            <i class="bx bx-check-circle"></i>
+                            <p>Start Our Meeting</p>
+                        </div>
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                    </li>
+                    <li class="completed">
+                        <div class="task_title">
+                            <i class="bx bx-check-circle"></i>
+                            <p>Analysis Our Site</p>
+                        </div>
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                    </li>
+                    <li class="uncompleted">
+                        <div class="task_title">
+                            <i class="bx bx-x-circle"></i>
+                            <p>Play Snooker</p>
+                        </div>
+                        <i class="bx bx-dots-vertical-rounded"></i>
+                    </li>
+                    
+                </ul>
+             </div>
+             <!--------------------------Reminder close---------------->
+            </div>
+            
+            <!--------------bottom Data close--------------------->
+        </main>
+        <!-------Main Close------->
+    </div>
+    <!--------- Content close----------------->
+    <script src="dashboard.js"></script>
+</body>
+</html>

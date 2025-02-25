@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Page Title</title>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=true" />
+ <link rel="stylesheet" href="calc.css" type="text/css">
+ <script type="text/javascript" src="calc.js"></script>
+ </head>
+ <body>
+ <style>
+ body{
+    background-image: linear-gradient(50deg, blue 0%, #1276af 100%);
+}
+.container {
+ width: 300px;
+ padding:0px 10px;
+ margin: 0px auto;
+}
+
+.red {
+ color: #678;
+}
+table {
+ margin: 0px 5px 5px 5px;
+}
+
+button {
+ width: 50px; 
+ height: 50px; 
+ font-size: 22px;
+ background-color: rgba(150, 100, 150, 0.5);
+ color: #fee;
+ border: 2px #b9b outset;
+ border-radius: 5px;
+ outline: none;
+ cursor: pointer;
+}
+.top {
+ height: 30px; 
+ background-color: #009788;
+ border-radius: 4px;
+ border: 1px green outset;
+ color: #fff;
+   font-size: 16px;
+}
+#c {
+ height: 64px;
+ color: #fff;
+ font-weight: bold;
+}
+
+button:active{
+ background-color: #dbc;
+ box-shadow: none ;
+ padding-top: 4px;
+ outline: 1px solid #989;
+ border: 3px #b9b inset;
+}
+.top:hover{
+ background-color: #bab;
+ box-shadow: inset 5px 5px 5px #cab, inset -5px -5px 5px #a98;
+}
+button:hover{
+ background-color: #a9a;
+}
+.top:active{
+ background-color: #dbc;
+ box-shadow: none ;
+ padding-top: 4px;
+ outline: 1px solid #989;
+ border: 3px #b9b inset;
+}
+#display-container {
+ border: 3px inset;
+ margin-bottom: 10px;
+}
+#h1, #display1 { 
+ width: 260px; 
+ height: 25px; 
+ padding: 2px;
+ padding-top: 4px; 
+ background-color:powderblue; 
+ font-size: 22px;
+ font-family: sans-serif;
+ font-weight: bold;
+ text-align: right;
+ overflow: hidden;
+ font-weight:bold;
+ color: #245;
+ text-shadow: 2px 2px 1px #8ac;
+}
+#display1 {
+ font-size: 20px;
+}
+
+.div {
+ border: 5px #6bc ridge  ;
+ border-radius: 10px;
+ margin: 0px 5px 5px 5px;
+ padding-top: 0px;
+ width: 286px;
+   background-color: #689;
+ font-size: 11px;
+ color: white;
+}
+.w {
+ box-shadow: -10px 10px 10px silver;
+ border: 5px #6bc groove;
+ margin: 0px 5px 5px 5px;
+ border-radius: 10px;
+ padding-top: 0px;
+ font-size: 11px;
+ cursor: pointer;
+ width: 285px;
+ color: white;
+}
+
+}
+.disabled, .disabled:active, .disabled:hover {
+ padding-top: 0px;
+ background-color: #999;
+ box-shadow: 0px 0px 0px grey;
+ border: none;
+}
+
+sup {
+ font-size: .65em;
+}
+ </style>
+ <div class="container">
+
+ 
+ <div class="div">
+ <table><caption><pre></bsp></caption>
+ <tr>
+ <td colspan="5"><div id="display-container"><div id="display1"><small><small><span></span></small></small></div><div id="h1"><small><small><span></span></small></small></div></div></td>
+ </tr>
+ 
+ <tr>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = bsp()'>Del</button></td>   
+ <td><button class="top" onclick='getElementById("h1").innerHTML = mp()'>M+</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = mr()'>MR</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = maths("rand")'><small>Rnd</small></button></td>
+ <td rowspan="2"><button id="c" class="top" onclick='getElementById("h1").innerHTML = c("")'>C</button></td>
+ </tr>
+ 
+ <tr>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = maths("res")'><sup>1</sup>/<sub>10</sub></button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = maths("logTen")'><small>log10</small></sup></button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = maths("ln")'>ln</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = PE("E")'>e</button></td>
+  </tr>
+  
+  <tr>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = maths("sine")'>sin</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = maths("cosine")'>cos</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = maths("tangent")'>tan</sup></button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = PE("PI")'>π</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = percent()'>%</button></td>
+ </tr>
+ 
+ <tr>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = maths("fact")'>n!</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = digit("%")'>Mod</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = power("^")'>x<sup>y</sup></button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = power("√")'><sup>y</sup>√x</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = maths("cubert")'><sup>3</sup>√</button></td>
+ </tr>
+ 
+ <tr>
+ <td><button class="top disabled" onclic='getElementById("h1").innerHTML = digit("(")'>(</button></td>
+ <td><button class="top disabled" onclic='getElementById("h1").innerHTML = digit(")")'>)</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = base("bin")'>bin</button></td>
+ <td><button class="top" onclick='getElementById("h1").innerHTML = base("oct")'>oct</button></td>

@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    height:100vh;
+}
+.btn{
+    width:150px;
+    height:45px;
+    position:relative;
+    cursor:pointer;
+    transition: all .4s;
+
+}
+.btn:hover{
+    background: #21cad6;
+    transition-delay: .8s;
+    color: white;
+    font-size: 1.2rem;
+    
+}
+.d1 , .d2{
+    position: absolute;
+    width:100%;
+    height: 4px;
+    background: #21d6cd;
+    transform: scaleX(0);
+    transition: all .4s;
+    transition-delay: .4s;
+
+}
+.d1{
+    top:0;
+    transform-origin: left;
+    
+}
+.d2{
+    bottom:0;
+    transform-origin: right;
+
+}
+.btn:hover .d1, .btn:hover .d2{
+    transform: scaleX(1);
+    transition-delay: 0s;
+}
+.d3, .d4{
+    position: absolute;
+    width:4pxs;
+    height: 100%;
+    background: #7b21d6;
+    transform: scaleY(0);
+    transition: all .4s;
+   
+
+}
+.d3{
+    left:0;
+    transform-origin: bottom;
+    
+}
+.d4{
+    right:0;
+    transform-origin: top;
+
+}
+.btn:hover .d3, .btn:hover .d4{
+    transform: scaleY(1);
+    transition-delay: .4s;
+}
