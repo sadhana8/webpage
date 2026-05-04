@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animated Gradient Background */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #667eea, #764ba2, #ff6a00, #ee0979);
+  background-size: 800% 800%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.container {
+  text-align: center;
+  width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 15px;
+}
+
+/* Category selector */
+select {
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(255,255,255,0.3);
+  color: #000;
+}
+
+/* Quote Card */
+.quote-card {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.quote-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quote-card:hover {
+  transform: scale(1.05);
+}
+
+/* Quote Text */
+#quote {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Author Text */
+#author {
+  font-size: 1rem;
+  font-style: italic;
+  text-align: right;
+}
+
+/* Buttons */
+.buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  background: linear-gradient(45deg, #00e0ff, #ff00ff);
+  color: #000;
+}
+
+/* Button Hover */
+.buttons button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}

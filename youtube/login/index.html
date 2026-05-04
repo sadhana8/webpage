@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background">
+      <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <div class="container" id="container">
+    <!-- Login Form -->
+    <form id="loginForm">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <div class="error" id="loginEmailError"></div>
+
+      <div class="password-field">
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePassword('loginPassword', this)">👁️</span>
+      </div>
+      <div class="error" id="loginPasswordError"></div>
+
+      <button type="submit">Login</button>
+      <div class="toggle">
+        <p>Don't have an account? <a id="showSignup">Sign Up</a></p>
+      </div>
+    </form>
+
+    <!-- Signup Form -->
+    <form id="signupForm" style="display: none;">
+      <h2>Sign Up</h2>
+      <input type="text" id="signupName" placeholder="Full Name" required>
+      <div class="error" id="signupNameError"></div>
+
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <div class="error" id="signupEmailError"></div>
+
+      <div class="password-field">
+        <input type="password" id="signupPassword" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePassword('signupPassword', this)">👁️</span>
+      </div>
+      <div class="error" id="signupPasswordError"></div>
+
+      <div class="password-field">
+        <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+        <span class="toggle-password" onclick="togglePassword('signupConfirm', this)">👁️</span>
+      </div>
+      <div class="error" id="signupConfirmError"></div>
+
+      <button type="submit">Sign Up</button>
+      <div class="toggle">
+        <p>Already have an account? <a id="showLogin">Login</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

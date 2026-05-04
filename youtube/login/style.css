@@ -1,0 +1,255 @@
+/* ------------------ Reset ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* ------------------ Body & Background ------------------ */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #b883f0, #2575fc, #f5bf99, #ff007a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Background floating shapes */
+.background::before,
+.background::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+  animation: floatShapes 12s infinite ease-in-out alternate;
+}
+
+.background::before {
+  width: 250px;
+  height: 250px;
+  background: #ffffff20;
+  top: 5%;
+  left: 10%;
+  box-shadow: 0 0 60px rgba(255,255,255,0.2), 0 0 100px rgba(255,0,122,0.2);
+}
+
+.background::after {
+  width: 350px;
+  height: 350px;
+  background: #ffffff15;
+  bottom: 5%;
+  right: 10%;
+  box-shadow: 0 0 60px rgba(255,255,255,0.2), 0 0 100px rgba(106,17,203,0.2);
+}
+
+@keyframes floatShapes {
+  0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  50% { transform: translateY(-40px) translateX(20px) rotate(45deg); }
+  100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+}
+
+/* Small floating particles */
+.background span {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #ff007a, #6a11cb, #2575fc, #f5bf99);
+  opacity: 0.5;
+  box-shadow: 0 0 20px rgba(255,0,122,0.5), 0 0 40px rgba(106,17,203,0.3), 0 0 60px rgba(37,117,252,0.2);
+  animation: floatGlow 15s linear infinite, colorShift 10s ease-in-out infinite;
+}
+
+/* Particle positions and sizes */
+.background span:nth-child(1) { width: 20px; height: 20px; top: 10%; left: 20%; animation-duration: 12s; }
+.background span:nth-child(2) { width: 25px; height: 25px; top: 70%; left: 10%; animation-duration: 18s; }
+.background span:nth-child(3) { width: 15px; height: 15px; top: 50%; left: 50%; animation-duration: 10s; }
+.background span:nth-child(4) { width: 30px; height: 30px; top: 20%; left: 80%; animation-duration: 14s; }
+.background span:nth-child(5) { width: 18px; height: 18px; top: 80%; left: 60%; animation-duration: 16s; }
+
+/* Particle animation */
+@keyframes floatGlow {
+  0% { transform: translateY(0px) translateX(0px) rotate(0deg); opacity: 0.5; }
+  25% { transform: translateY(-30px) translateX(20px) rotate(45deg); opacity: 0.7; }
+  50% { transform: translateY(-60px) translateX(-20px) rotate(90deg); opacity: 0.6; }
+  75% { transform: translateY(-30px) translateX(20px) rotate(135deg); opacity: 0.8; }
+  100% { transform: translateY(0px) translateX(0px) rotate(180deg); opacity: 0.5; }
+}
+
+/* Particle color shift */
+@keyframes colorShift {
+  0% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* ------------------ Container ------------------ */
+.container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 50px 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: 0.5s all ease;
+}
+
+/* Container hover glow */
+.container:hover {
+  box-shadow: 0 0 80px rgba(255,255,255,0.3);
+  transform: translateY(-5px);
+}
+
+/* ------------------ Title ------------------ */
+.container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255,255,255,0.7);
+}
+
+/* ------------------ Inputs ------------------ */
+.container input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.container input::placeholder { color: rgba(255,255,255,0.7); }
+
+.container input:focus {
+  outline: none;
+  border: 1px solid #6a11cb;
+  box-shadow: 0 0 10px #6a11cb;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ------------------ Buttons ------------------ */
+.container button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc, #ff007a, #f5bf99);
+  background-size: 200% 200%;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s all ease;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  animation: buttonBG 10s ease infinite;
+}
+
+.container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,255,255,0.5);
+}
+
+@keyframes buttonBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ------------------ Toggle Links ------------------ */
+.container .toggle {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.container .toggle a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.container .toggle a:hover { color:#ff007a; text-decoration: underline; }
+
+/* ------------------ Error Messages ------------------ */
+.error {
+  color: #ff4d6d;
+  font-size: 14px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+/* ------------------ Password Field ------------------ */
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px; /* space for the eye */
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  font-size: 16px;
+}
+
+.password-field .toggle-password {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+
+.password-field .toggle-password:hover {
+  color: #ff007a;
+  transform: translateY(-50%) scale(1.2);
+}
+
+
+/* ------------------ Responsive ------------------ */
+@media (max-width: 768px) {
+  .container { padding: 40px 30px; }
+  .container h2 { font-size: 24px; }
+  .container input, .container button { font-size: 15px; }
+  .password-field .toggle-password { font-size: 18px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 30px 20px; }
+  .container h2 { font-size: 20px; }
+  .container input, .container button { font-size: 14px; }
+  .password-field .toggle-password { font-size: 16px; }
+}
+
+/* ------------------ Fade Animations ------------------ */
+.fade-in { animation: fadeIn 0.5s forwards; }
+.fade-out { animation: fadeOut 0.5s forwards; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeOut { from { opacity: 1; transform: translateX(0); } to { opacity: 0; transform: translateX(-50px); } }

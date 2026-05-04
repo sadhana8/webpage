@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh; background: #f6f5f7;
+    }
+
+    .container {
+      position: relative;
+      width: 1000px; height: 600px;
+      background: #fff; border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    /* Forms */
+    .forms-container {
+      position: absolute; width: 50%; height: 100%;
+      top: 0; left: 0; z-index: 2;
+      transition: all 0.7s ease-in-out;
+      padding: 0 50px;
+    }
+
+    form {
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      height: 100%;
+      text-align: center;
+    }
+
+    form h2 { margin-bottom: 25px; color: #333; font-size: 28px; }
+
+    .input-field {
+      display: flex; align-items: center;
+      margin: 12px 0; width: 100%;
+      background: #f0f0f0; border-radius: 30px;
+      padding: 15px 20px;
+    }
+    .input-field i { margin-right: 15px; color: #666; font-size: 16px; }
+    .input-field input { border: none; outline: none; background: none; flex: 1; font-size: 16px; }
+
+    form button {
+      margin-top: 20px; padding: 14px 50px;
+      border-radius: 25px; border: none;
+      background: #4facfe; background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: #fff; font-weight: bold; font-size: 16px;
+      cursor: pointer; transition: 0.3s;
+    }
+    form button:hover { opacity: 0.9; }
+
+    .social-text { margin: 20px 0; font-size: 14px; color: #555; }
+    .social-icons a {
+      display: inline-flex; justify-content: center; align-items: center;
+      width: 42px; height: 42px; margin: 0 6px;
+      border-radius: 50%; border: 1px solid #ddd; color: #333;
+      transition: 0.3s;
+    }
+    .social-icons a:hover { background: #4facfe; color: #fff; }
+
+    /* Panels with curve */
+    .panels-container {
+      position: absolute; right: 0; top: 0;
+      width: 50%; height: 100%; color: #fff;
+      display: flex; justify-content: center; align-items: center;
+      text-align: center; overflow: hidden;
+      transition: all 0.8s ease-in-out;
+    }
+
+    .wave-bg {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%; z-index: 1;
+      transition: transform 0.8s ease-in-out;
+    }
+    .wave-bg svg { width: 100%; height: 100%; display: block; }
+
+    .panel-content {
+      position: relative; z-index: 2; width: 85%;
+    }
+    .panel-content h3 { font-size: 26px; margin-bottom: 15px; }
+    .panel-content p { font-size: 15px; margin-bottom: 25px; line-height: 1.5; }
+    .panel-content button {
+      border: 2px solid #fff; background: transparent; color: #fff;
+      border-radius: 25px; padding: 12px 35px;
+      cursor: pointer; transition: 0.3s;
+    }
+    .panel-content button:hover { background: #fff; color: #4facfe; }
+    .image { width: 260px; margin-top: 20px; }
+
+    /* Animations */
+    .signup-form { position: absolute; left: -100%; top: 0; width: 100%; height: 100%; transition: all 0.7s ease-in-out; }
+    .container.signup-mode .signup-form { left: 0; }
+    .signin-form { position: absolute; top: 0; width: 100%; height: 100%; transition: all 0.7s ease-in-out; }
+    .container.signup-mode .signin-form { left: 100%; }
+    .container.signup-mode .forms-container { transform: translateX(100%); }
+    .container.signup-mode .panels-container { transform: translateX(-100%); }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Forms -->
+    <div class="forms-container">
+      <form class="signin-form">
+        <h2>Sign in</h2>
+        <div class="input-field"><i class="fas fa-user"></i><input type="text" placeholder="Username"></div>
+        <div class="input-field"><i class="fas fa-lock"></i><input type="password" placeholder="Password"></div>
+        <button>Login</button>
+        <p class="social-text">Or Sign in with social platforms</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </form>
+
+      <form class="signup-form">
+        <h2>Sign up</h2>
+        <div class="input-field"><i class="fas fa-user"></i><input type="text" placeholder="Username"></div>
+        <div class="input-field"><i class="fas fa-envelope"></i><input type="email" placeholder="Email"></div>
+        <div class="input-field"><i class="fas fa-lock"></i><input type="password" placeholder="Password"></div>
+        <button>Sign Up</button>
+        <p class="social-text">Or Sign up with social platforms</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Blue Wave Side -->
+    <div class="panels-container" id="panel">
+      <div class="wave-bg" id="wave">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#4facfe"/>
+              <stop offset="100%" style="stop-color:#00f2fe"/>
+            </linearGradient>
+          </defs>
+          <!-- Big, smooth overlapping curve -->
+          <path id="wavePath" d="M0,0 C500,150 500,450 800,600 L800,0 Z" fill="url(#grad)"/>
+        </svg>
+      </div>
+      <div class="panel-content" id="panelContent">
+        <h3>New here?</h3>
+        <p>Create an account to explore more features with us.</p>
+        <button id="signUpBtn">Sign Up</button>
+        <img src="rocket.png" class="image" alt="rocket">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById('container');
+    const panelContent = document.getElementById('panelContent');
+    const wavePath = document.getElementById('wavePath');
+
+    // Curves
+    const signInCurve = "M0,0 C500,150 500,450 800,600 L800,0 Z";    // Sign In curve
+    const signUpCurve = "M0,0 C300,150 300,450 800,600 L800,0 Z";     // Sign Up curve (flipped slightly)
+
+    const setSignUp = () => {
+      container.classList.add("signup-mode");
+      wavePath.setAttribute("d", signUpCurve);
+      panelContent.innerHTML = `
+        <h3>One of us?</h3>
+        <p>Already have an account? Just sign in.</p>
+        <button id="signInBtn">Sign In</button>
+        <img src="Screenshot 2025-09-20 120236.png" class="image" alt="desk">
+      `;
+      document.getElementById("signInBtn").addEventListener("click", setSignIn);
+    };
+
+    const setSignIn = () => {
+      container.classList.remove("signup-mode");
+      wavePath.setAttribute("d", signInCurve);
+      panelContent.innerHTML = `
+        <h3>New here?</h3>
+        <p>Create an account to explore more features with us.</p>
+        <button id="signUpBtn">Sign Up</button>
+        <img src="Screenshot 2025-09-20 120250.png" class="image" alt="rocket">
+      `;
+      document.getElementById("signUpBtn").addEventListener("click", setSignUp);
+    };
+
+    document.getElementById("signUpBtn").addEventListener("click", setSignUp);
+  </script>
+</body>
+</html>

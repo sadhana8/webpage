@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Filter App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Image Filter App</h1>
+    
+    <!-- Upload -->
+    <input type="file" id="upload" accept="image/*">
+
+    <!-- Preview -->
+    <div class="preview">
+      <img id="image" src="" alt="Upload an image">
+    </div>
+
+    <!-- Sliders -->
+    <div class="controls">
+      <label>Brightness: <input type="range" id="brightness" min="0" max="200" value="100"></label>
+      <label>Contrast: <input type="range" id="contrast" min="0" max="200" value="100"></label>
+      <label>Blur: <input type="range" id="blur" min="0" max="10" value="0"></label>
+      <label>Sepia: <input type="range" id="sepia" min="0" max="100" value="0"></label>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button id="reset">Reset</button>
+      <button id="download">Download</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

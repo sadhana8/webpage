@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced AI Quote Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Advanced AI Quote Generator</h1>
+
+    <!-- Category selector -->
+    <select id="category">
+      <option value="success">Success</option>
+      <option value="happiness">Happiness</option>
+      <option value="life">Life</option>
+      <option value="love">Love</option>
+    </select>
+
+    <!-- Quote card -->
+    <div class="quote-card">
+      <p id="quote">Click "New Quote" to get inspiration!</p>
+      <p id="author"></p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button id="new-quote">New Quote</button>
+      <button id="speak">🔊 Speak</button>
+      <button id="auto-speak">🔊 Auto Speak: OFF</button>
+      <button id="copy">📋 Copy</button>
+      <button id="tweet">🐦 Tweet</button>
+      <button id="download">📥 Download</button>
+    </div>
+  </div>
+
+  <!-- html2canvas for download feature -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
